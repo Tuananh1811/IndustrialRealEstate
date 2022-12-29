@@ -1,0 +1,6 @@
+# muốn đẩy file nào public ra ngoài
+/node_modules
+/vendor
+/.idea
+.idea/
+.env
