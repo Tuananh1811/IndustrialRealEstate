@@ -35,7 +35,7 @@ let hashUserPassword = (password) =>{
        }
     })
 }
-//
+
 let getAllUser = () =>{
     return new Promise(async(resolve, reject) =>{
         try{
@@ -48,6 +48,7 @@ let getAllUser = () =>{
         }
     })
 }
+//
 let getUserInfoById = (userId) => {
     return new Promise(async(resolve,reject)=>{
         try{

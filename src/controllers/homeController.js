@@ -11,6 +11,7 @@ let getHomePage = async (req, res) => {
         console.log(e);
     } 
 }
+
 let getAboutPage = (req, res) => {
     return res.render('test/about.ejs');
 }
@@ -24,6 +25,7 @@ let postCRUD = async (req, res) => {
    
     return res.send("post crud from server");
 }
+
 let displayGetCRUD= async(req,res) =>{
     let data=await CRUDService.getAllUser();
    // console.log(data);
@@ -31,6 +33,7 @@ let displayGetCRUD= async(req,res) =>{
         dataTable:data //key:value
     });
 }
+//
 let getEditCRUD=async(req,res) => {
     let userId=req.query.id;
     if(userId){
@@ -47,8 +50,7 @@ let getEditCRUD=async(req,res) => {
 let putCRUD= async (req, res) =>{
     let data=req.body;
     
-  let allUsers= await CRUDService.updateUserData(data);
-
+    let allUsers= await CRUDService.updateUserData(data);
    return res.render('displayCRUD.ejs',{
     dataTable:allUsers 
     });
@@ -58,9 +60,7 @@ let deleteCRUD = async(req,res) => {
     let id=req.query.id;
     if(id){
        await CRUDService.deleteUserById(id);
-       
-            
-            return res.send("delete succeed");
+        return res.send("delete succeed");
         
     }else{
         return res.send("user not found !");
