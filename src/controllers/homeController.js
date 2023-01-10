@@ -55,7 +55,7 @@ let putCRUD= async (req, res) =>{
     dataTable:allUsers 
     });
 }
-
+//
 let deleteCRUD = async(req,res) => {
     let id=req.query.id;
     if(id){
