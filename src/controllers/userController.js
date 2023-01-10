@@ -53,7 +53,7 @@ let handleEditUser=async(req,res)=>{
   
 
 }
-let handleDleteUser=async(req,res)=>{
+let handleDeleteUser=async(req,res)=>{
     if(!req.body.id){
         return res.status(200).json({
             errCode:1,
@@ -68,7 +68,7 @@ module.exports={
     handleGetAllUser:handleGetAllUser,
     handleCreateNewUser:handleCreateNewUser,
     handleEditUser:handleEditUser,
-    handleDleteUser:handleDleteUser
+    handleDeleteUser:handleDeleteUser
 
     
 }
