@@ -24,5 +24,5 @@ let initWebRoutes = (app) => {
     router.get("/api/allcode",userController.getAllCode);
     return app.use("/", router);
 }
-//
+
 module.exports = initWebRoutes;

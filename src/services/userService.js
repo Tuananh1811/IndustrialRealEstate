@@ -94,6 +94,9 @@ let getAllUsers = (userId) => {
             }
             resolve(users);
         }
+       /**
+        * 
+        */
         catch (e) {
             reject(e);
         }
@@ -119,9 +122,10 @@ let createNewUser = (data) => {
                     lastName: data.lastName,
                     phoneNumber: data.phoneNumber,
                     address: data.address,
-                    gender: data.gender === '1' ? true : false,
+                    gender: data.gender ,
                     companyName: data.companyName,
-                    roleId: data.roleId
+                    roleId: data.roleId,
+                    positionId:data.positionId
                 })
             }
 
